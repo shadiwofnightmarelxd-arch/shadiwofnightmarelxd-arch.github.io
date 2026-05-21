@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f111a; /* Tom escuro idêntico ao do print */
+            background-color: #0f111a; 
             color: #fff;
             min-height: 100vh;
         }
@@ -61,7 +61,7 @@
             font-size: 64px;
             font-weight: bold;
             margin-bottom: 25px;
-            background: linear-gradient(90deg, #5dade2, #85929e); /* Ajustado para o degradê azulado do print */
+            background: linear-gradient(90deg, #5dade2, #85929e); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -76,7 +76,6 @@
             line-height: 1.5;
         }
 
-        /* Botão estilizado exatamente como o print */
         .btn {
             padding: 14px 45px;
             font-size: 16px;
@@ -101,7 +100,7 @@
 
         .features {
             padding: 100px 80px;
-            background: #131622; /* Fundo ligeiramente diferente para destacar seções */
+            background: #131622; 
         }
 
         .features h2 {
@@ -119,7 +118,6 @@
             margin: 0 auto;
         }
 
-        /* Cards com cantos arredondados suavizados e cores do print */
         .feature-card {
             background: #1a1d2c;
             padding: 40px 30px;
@@ -182,8 +180,9 @@
             border-radius: 12px;
         }
 
+        /* AQUI: O terceiro número (180px) move a barra cinza para baixo */
         .download {
-            padding: 100px 20px;
+            padding: 100px 20px 180px 20px;
             text-align: center;
             background: #131622;
         }
@@ -193,7 +192,6 @@
             margin-bottom: 25px;
         }
 
-        /* Caixa de versão idêntica à do print */
         .version {
             display: inline-block;
             background: rgba(255, 255, 255, 0.07);
@@ -218,6 +216,14 @@
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
+        /* Garante que o ícone do YouTube fique no tamanho correto */
+        footer svg {
+            width: 16px !important;
+            height: 16px !important;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -226,6 +232,9 @@
         }
 
         .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             color: #fff;
             text-decoration: none;
             padding: 10px 25px;
@@ -240,12 +249,17 @@
             color: #0f111a;
         }
 
+        /* Deixa o botão vermelho ao passar o mouse */
+        .social-links a#youtube:hover {
+            background: #ff0000 !important;
+            color: #fff !important;
+        }
+
         footer p {
             color: #4a5264;
             font-size: 13px;
         }
 
-        /* Responsividade para telas menores */
         @media (max-width: 992px) {
             .feature-grid, .screenshot-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -347,17 +361,14 @@
         <div class="version"><strong>Working</strong> &nbsp;|&nbsp; Last Working Version: version-689e359b09ad43b0</div>
         <p>Free and open source. Compatible with most games.</p>
 
-        <a href="https://discord.gg/MdfebQgXKe" target="_blank" rel="noopener noreferrer">
-         <a href="Test for mv.zip" download class="btn btn-primary">⬇️ Download for Windows</a>
+        <a href="Test for mv.zip" download class="btn btn-primary">⬇️ Download for Windows</a>
+    </section>
 
     <footer>
         <div class="social-links">
-    <a href="https://discord.gg/MdfebQgXKe" target="_blank" id="discord">Discord</a>
-    <a href="https://github.com/Maxey1950/MaxeysVisuals/" target="_blank" id="github">Source</a>
-    <a href="https://youtube.com/@maxeysvisuals" target="_blank" id="youtube">YouTube</a>
-        </div>
-        <p>&copy; 2026 Maxey Tech Inc. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+            <a href="https://discord.gg/MdfebQgXKe" target="_blank" id="discord">Discord</a>
+            <a href="https://github.com/Maxey1950/MaxeysVisuals/" target="_blank" id="github">Source</a>
+            
+            <a href="https://youtube.com/@maxeysvisuals" target="_blank" id="youtube">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.
